@@ -4,6 +4,17 @@
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.wave {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 840px;
+    transition: 4s;
+}
+
 h1 {
     margin: 25px;
     font-size: 4.2em;
@@ -13,26 +24,24 @@ h1 {
     margin-right: 40px;
     transition: 0.8s;
     text-transform: uppercase;
-    -webkit-text-stroke: 2px orchid;
-    animation: animatehover 10s ease infinite;
+    -webkit-text-stroke: 3px orchid;
+    animation: textbounce 10s ease infinite;
+}
+
+.audioplayer {
+    position:fixed;
+    width: 242px;
+    justify-content: center;
+    z-index: 10;
 }
 
 .heart {
-    animation: animate 10s ease infinite;
+    animation: bounce 10s ease infinite;
 }
 
 .arrow {
     margin-bottom: -200px;
     transform: rotate(90deg);
-}
-
-.arrow::before{
-    content: '';
-    top: -10px;
-    left : 15px;
-    width: auto;
-    height: auto;
-    background-image: url(../Materials/arrow.png);
 }
 
 .container {
@@ -52,7 +61,7 @@ h1 {
     height: 420px;
     background: whitesmoke;
     border-radius: 20px;
-    margin: 20px 20px 20px;
+    margin: 42px;
     overflow: hidden;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
     transition: 2s;
@@ -135,13 +144,6 @@ h1 {
 
     transition: 1s;
 }
-.wave {
-    position: relative;
-    display: grid;
-    place-items: center;
-    min-height: 840px;
-    background: linear-gradient(90deg, #f0027f, #75489f);
-}
 
 .wave:before{
     content: '';
@@ -179,8 +181,9 @@ h1 {
     text-align: center;
     transition: 0.8s;
     text-transform: uppercase;
-    -webkit-text-stroke: 1.3px orchid;
+    -webkit-text-stroke: 1.3px #75489f;
 }
+
 
 .goodluck {
     width: 100%;
@@ -193,13 +196,13 @@ h1 {
     color:transparent;
     text-align: center;
     text-transform: uppercase;
-    -webkit-text-stroke: 1.2px orchid;   
+    -webkit-text-stroke: 1.2px #75489f;   
 }
 
 .footer {
     position: relative;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
@@ -207,12 +210,11 @@ h1 {
     background: linear-gradient(90deg, #f0027f, #75489f);
 }
 
-.footer a {
+.footer .icon {
     font-size: 2em;
     text-decoration: none;
     color:transparent;
     text-align: center;
-    padding-left: 42px;
     -webkit-text-stroke: 0.6px whitesmoke;
 }
 
@@ -220,10 +222,34 @@ h1 {
     width: 32px;
     height: 32px;
     background: url(../Materials/github.png);
+    color: whitesmoke;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
-@keyframes animate {
+.footer .footer_arrow {
+    width: 26px;
+    height: 26px;
+    margin-right: 60px;
+    background-image: url(../Materials/arrow.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes bounce {
     0%
     {
         height: 180px;
@@ -231,8 +257,8 @@ h1 {
     }
     50% 
     {
-        height: 300px;
-        width: 300px;
+        height: 280px;
+        width: 280px;
     }
     100%
     {
@@ -240,20 +266,23 @@ h1 {
         width: 180px;
     }
 }
-@keyframes animatehover {
+@keyframes textbounce {
     0%
     {
         transform: scale(0.8);
-        text-shadow: none;
+        margin-bottom: 0px;
+        text-shadow: 0 0 240px #ee7752;
     }
     50% 
     {
         transform: scale(1.09);
-        text-shadow: 0 0 80px whitesmoke;
+        margin-bottom: 20px;
+        text-shadow: 0 0 240px #23a6d5;
     }
     100%
     {
         transform: scale(0.8);
-        text-shadow: none;
+        margin-bottom: 0px;
+        text-shadow: 0 0 240px #ee7752;
     }
 }
