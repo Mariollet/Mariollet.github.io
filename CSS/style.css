@@ -9,6 +9,8 @@ h1 {
     font-size: 4.2em;
     color:transparent;
     text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
     transition: 0.8s;
     text-transform: uppercase;
     -webkit-text-stroke: 2px orchid;
@@ -37,7 +39,7 @@ h1 {
     position: relative;
     width: 100%;
     padding-top: 100px;
-    padding-bottom: 160px;
+    padding-bottom: 100px;
     display: flex;
     justify-content:space-evenly;
     align-items: center;
@@ -163,7 +165,36 @@ h1 {
     display: grid;
     place-items: center;
     margin-top: -240px;
+}
 
+.description {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 1.8em;
+    padding-bottom: 80px;
+    margin-left: 160px;
+    margin-right: 160px;
+    color:transparent;
+    text-align: center;
+    transition: 0.8s;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px orchid;
+}
+
+.goodluck {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 1.2em;
+    padding-top: 95px;
+    margin-left: 160px;
+    margin-right: 160px;
+    color:transparent;
+    text-align: center;
+    transition: 0.8s;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px orchid;   
 }
 
 .footer {
@@ -196,8 +227,8 @@ h1 {
 @keyframes animate {
     0%
     {
-        height: 200px;
-        width: 200px;
+        height: 180px;
+        width: 180px;
     }
     50% 
     {
@@ -206,21 +237,24 @@ h1 {
     }
     100%
     {
-        height: 200px;
-        width: 200px;
+        height: 180px;
+        width: 180px;
     }
 }
 @keyframes animatehover {
     0%
     {
+        transform: scale(0.8);
         text-shadow: none;
     }
     50% 
     {
+        transform: scale(1.09);
         text-shadow: 0 0 80px whitesmoke;
     }
     100%
     {
+        transform: scale(0.8);
         text-shadow: none;
     }
 }
