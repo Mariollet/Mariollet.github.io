@@ -37,11 +37,15 @@ h1 {
 
 .heart {
     animation: bounce 10s ease infinite;
+    width: 256px;
+    height: 256px;
 }
 
 .arrow {
     margin-bottom: -200px;
     transform: rotate(90deg);
+    width: 32px;
+    height: 32px;
 }
 
 .container {
