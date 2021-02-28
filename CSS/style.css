@@ -179,7 +179,7 @@ h1 {
     text-align: center;
     transition: 0.8s;
     text-transform: uppercase;
-    -webkit-text-stroke: 1px orchid;
+    -webkit-text-stroke: 1.3px orchid;
 }
 
 .goodluck {
@@ -192,9 +192,8 @@ h1 {
     margin-right: 160px;
     color:transparent;
     text-align: center;
-    transition: 0.8s;
     text-transform: uppercase;
-    -webkit-text-stroke: 1px orchid;   
+    -webkit-text-stroke: 1.2px orchid;   
 }
 
 .footer {
